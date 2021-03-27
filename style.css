@@ -3,7 +3,7 @@ body {
     min-height: 600px;
     background-image: url('https://i.ibb.co/NKg24nr/134597389-math-on-dark-green-board-with-many-solution.png');
     background-color: #ffffff;
-    background-size: 100%;
+    background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
   }
@@ -29,8 +29,9 @@ body {
   .page-logo {
     width: 200px;
     position: absolute;
-    left: 43%;
-    bottom: 20px;
+    position: absolute;
+    bottom: 30px;
+    right:10px;
   }
   
   .alura-logo {
