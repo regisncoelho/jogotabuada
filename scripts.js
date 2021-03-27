@@ -7,6 +7,7 @@ function geraMultiplos() {
   multiplo2 = parseInt(Math.random() * 10)
   resultado = multiplo1*multiplo2
   mostraMultiplos.innerHTML = (multiplo1 + " x " + multiplo2 + " =")
+  mostraResposta.innerHTML = ""
 }
   function conferir() {
   mostraMultiplos.innerHTML = (multiplo1 + " x " + multiplo2 + " = " + resultado)
@@ -19,8 +20,3 @@ function geraMultiplos() {
   }
     camporesposta.value = ""
   }
-
-function rerun() {
-  mostraResposta.innerHTML = ""
-  mostraMultiplos.innerHTML = ""
-}
