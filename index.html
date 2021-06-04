@@ -1,39 +1,57 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <title>
-        Jogo de Tabuada do Miguel
-    </title>
-     <link href="https://regisncoelho.github.io/jogotabuada/style.css" rel="stylesheet" />
-     <script src="https://regisncoelho.github.io/jogotabuada/scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Tabuada do Miguel</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="page-title">
-            Jogo de Tabuada do Miguel
-        </h1>
-        <p class="page-subtitle">
-            Aprenda a tabuada de uma vez por todas
-        </p>
-     
-  <div class="wrapper">
-        <button onclick="geraMultiplos()">Começar</button>
-  <br></div>
-      <h2>
-      <div id="mostraMultiplos"></div></h2>
-  
-                <div class="entrada">
-    <input type="number" placeholder="?" id="resposta">
-                  <button onclick="conferir()">Conferir</button>
-                  </div>
-      <h3><div id="mostraResposta"></div></h3>
-            
-        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-mentalista.svg" class="page-logo"
-            alt="">
-   <a href="https://alura.com.br/" target="_blank">
-        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-    </a>
-     </body>
-
+    <header class="page-header">
+        <h1 class="page-title">Jogo de Tabuada do Miguel</h1>
+        <h2 class="page-subtitle">Aprenda a tabuada de uma vez por todas</h2>
+    </header>
+    <main class="page-content">
+        <div class="whole-content">
+            <div class="game-field">
+                <br>
+                <input type="button" class="start-game page-button" value="Novo">
+                <div class="wrapper-content">
+                    <div class="multiples">
+                        <p class="show-multiplication"></p>
+                    </div>
+                    <div class="result">
+                        <p class="show-result"></p>
+                    </div>
+                </div>
+                <div class="wrapper-input">
+                    <label for="input-answer">Qual o resultado da multiplicação acima?</label>
+                    <input type="number" name="input-answer" id="input-answer">
+                </div>
+                <input type="button" class="check-answer page-button" value="Conferir">
+                <div class="outcome">
+                    <p class="answered-right"></p>
+                    <p class="answered-wrong"></p>
+                </div>
+            </div>
+            <div class="points-section">
+                <div class="stats">
+                    <p>Pontos: <br><span id="total-points" style="font-weight: 200;"></span></p>
+                    <p>Nº de tentativas:<br><span id="total-games" style="font-weight:200"></span></p>
+                </div>
+                <div class="stats percentage" style="text-align: center;">
+                    <p id="percentage"></p>
+                </div>
+                <div class="stats">
+                    <input type="button" class="clear-stats page-button" value="Recomeçar">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>
